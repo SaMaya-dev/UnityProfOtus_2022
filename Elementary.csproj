@@ -95,6 +95,7 @@
      <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableBool.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\Adapters\IntAdapter.cs" />
      <Compile Include="Assets\Modules\Elementary\Scripts\RunInBackgroundScript.cs" />
+     <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReciever_Vector.cs" />
      <None Include="Assets\Modules\Elementary\Elementary.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

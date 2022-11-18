@@ -363,6 +363,7 @@
 "Assets/Modules/Elementary/EventReceivers/EventReceiver_Int.cs"
 "Assets/Modules/Elementary/EventReceivers/EventReceiver_String.cs"
 "Assets/Modules/Elementary/EventReceivers/EventReceiver_Trigger.cs"
+"Assets/Modules/Elementary/EventReceivers/EventReciever_Vector.cs"
 "Assets/Modules/Elementary/EventReceivers/MultiEventReceiver.cs"
 "Assets/Modules/Elementary/EventReceivers/MultiEventReceiver_Base.cs"
 "Assets/Modules/Elementary/EventReceivers/MultiEventReceiver_Proxy.cs"
