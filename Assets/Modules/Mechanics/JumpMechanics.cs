@@ -6,13 +6,11 @@ using UnityEngine;
 public class JumpMechanics : MonoBehaviour
 {
     [SerializeField]
-    private EventReceiver jumpReceiver;
+    private EventReciever_Vector jumpReceiver;
 
     [SerializeField] 
     private Rigidbody rigidbody;
 
-    [SerializeField] 
-    private Vector3 jumpForce;
     private void OnEnable()
     {
         jumpReceiver.OnEvent += OnJumpEvent;
@@ -23,8 +21,8 @@ public class JumpMechanics : MonoBehaviour
         jumpReceiver.OnEvent -= OnJumpEvent;
     }
 
-    private void OnJumpEvent()
+    private void OnJumpEvent(Vector3 v)
     {
-        rigidbody.AddForce(jumpForce);
+        rigidbody.AddForce(v);
     }
 }

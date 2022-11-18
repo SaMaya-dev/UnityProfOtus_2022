@@ -4,7 +4,7 @@ using UnityEngine;
 public class ShotMechanics : MonoBehaviour
 {
     [SerializeField]
-    private EventReceiver shotReceiver;
+    private EventReciever_Vector shotReceiver;
 
     [SerializeField] 
     private Rigidbody bulletTemplate;
@@ -24,11 +24,11 @@ public class ShotMechanics : MonoBehaviour
         shotReceiver.OnEvent -= OnShotEvent;
     }
 
-    private void OnShotEvent()
+    private void OnShotEvent(Vector3 v)
     {
         var bullet = CreateBullet();
         bullet.gameObject.SetActive(true);
-        bullet.AddForce(Vector3.forward * 30, ForceMode.Impulse);
+        bullet.AddForce(v, ForceMode.Impulse);
     }
 
     private Rigidbody CreateBullet()
