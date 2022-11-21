@@ -7,13 +7,11 @@ public class ShotMechanics : MonoBehaviour
     private EventReciever_Vector shotReceiver;
 
     [SerializeField] 
-    private Rigidbody bulletTemplate;
+    private BulletShooter bulletShooter;
     
-    private void Awake()
-    {
-        bulletTemplate.gameObject.SetActive(false);
-    }
-
+    [SerializeField] 
+    private Transform bulletSpawnPoint;
+    
     private void OnEnable()
     {
         shotReceiver.OnEvent += OnShotEvent;
@@ -26,14 +24,6 @@ public class ShotMechanics : MonoBehaviour
 
     private void OnShotEvent(Vector3 v)
     {
-        var bullet = CreateBullet();
-        bullet.gameObject.SetActive(true);
-        bullet.AddForce(v, ForceMode.Impulse);
+        bulletShooter.Shoot(v, bulletSpawnPoint);
     }
-
-    private Rigidbody CreateBullet()
-    {
-        return Instantiate(bulletTemplate, bulletTemplate.transform.parent);
-    }
-
 }
