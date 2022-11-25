@@ -6,7 +6,7 @@ using UnityEngine;
 public class MoveMechanics : MonoBehaviour
 {
     [SerializeField]
-    private EventReciever_Vector moveReceiver;
+    private EventReceiver_Vector moveReceiver;
     
     [SerializeField] 
     private GameObject moveObject;
@@ -25,23 +25,8 @@ public class MoveMechanics : MonoBehaviour
 
     private void OnMoveEvent(Vector3 v)
     {
-        if (isMoving) return;
-        StartCoroutine(Move(v));
+       
+        moveObject.transform.position += v;
     }
-    
-    private IEnumerator Move(Vector3 posB)
-    {
-        isMoving = true;
-        float startTime = Time.time;
-        var deltaTime = Time.time - startTime;
-        var posA = moveObject.transform.localPosition;
-        while (deltaTime <= 1f)
-        {
-            deltaTime = Time.time - startTime;
-            moveObject.transform.localPosition = Vector3.Lerp(posA, posB, deltaTime);
-            yield return null;
-        }
 
-        isMoving = false;
-    }
 }

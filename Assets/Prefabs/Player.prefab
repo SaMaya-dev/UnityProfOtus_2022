@@ -54,6 +54,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404971710267633038}
+  - component: {fileID: 7984794403869890122}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -78,6 +79,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7984794403869890122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404971710267633039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3425b5e53ed0335428d2837cb6b22672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 1404971710848442328}
+  - {fileID: 1118005793361109023}
+  - {fileID: 1736134972790799935}
 --- !u!1 &1404971710386739610
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,6 +106,7 @@ GameObject:
   - component: {fileID: 1404971710386739609}
   - component: {fileID: 4476196357358835561}
   - component: {fileID: 5001232167128055174}
+  - component: {fileID: 1404971710848442328}
   m_Layer: 0
   m_Name: Move
   m_TagString: Untagged
@@ -137,6 +155,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveReceiver: {fileID: 4476196357358835561}
   moveObject: {fileID: 1404971710635884716}
+--- !u!114 &1404971710848442328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404971710386739610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f412a2e65f6f6b1448efa95154ca1b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveReceiver: {fileID: 4476196357358835561}
 --- !u!1 &1404971710426097483
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +318,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &1404971710794056563
 GameObject:
@@ -331,7 +362,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1404971710868785848}
   - component: {fileID: 1404971710868785854}
-  - component: {fileID: 3700063480812711327}
+  - component: {fileID: 5648961531032522837}
+  - component: {fileID: 1118005793361109023}
   m_Layer: 0
   m_Name: Jump
   m_TagString: Untagged
@@ -366,9 +398,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98312b0a16f762f478f6f42624b747c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpReceiver: {fileID: 3700063480812711327}
+  jumpReceiver: {fileID: 5648961531032522837}
+  jumpVector: {x: 0, y: 15, z: 0}
   rigidbody: {fileID: 1404971710635884631}
---- !u!114 &3700063480812711327
+--- !u!114 &5648961531032522837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -377,9 +410,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1404971710868785849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 802fbf8ae7cb3a340827c53a7024c2ad, type: 3}
+  m_Script: {fileID: 11500000, guid: a4ce1d2c9b2b4a2bae36618cb7933d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1118005793361109023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404971710868785849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9799fafd1629f845a98d19f27a2a93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpReceiver: {fileID: 5648961531032522837}
 --- !u!1 &1404971711224901554
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +557,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1404971711489901102}
   - component: {fileID: 1404971711489901101}
-  - component: {fileID: 1394328131541737695}
+  - component: {fileID: 8360564182791168997}
+  - component: {fileID: 1736134972790799935}
   m_Layer: 0
   m_Name: Shot
   m_TagString: Untagged
@@ -546,10 +593,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e77623ed5f87eaa43bdf00aedf26437b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotReceiver: {fileID: 1394328131541737695}
+  shotReceiver: {fileID: 8360564182791168997}
   bulletShooter: {fileID: 0}
   bulletSpawnPoint: {fileID: 1404971710635884627}
---- !u!114 &1394328131541737695
+  shotVector: {x: 20, y: 0, z: 0}
+--- !u!114 &8360564182791168997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -558,9 +606,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1404971711489901103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 802fbf8ae7cb3a340827c53a7024c2ad, type: 3}
+  m_Script: {fileID: 11500000, guid: a4ce1d2c9b2b4a2bae36618cb7933d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1736134972790799935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404971711489901103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a945eccb8c150af43b4f7173ef012361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootReceiver: {fileID: 8360564182791168997}
 --- !u!1 &1404971711543941703
 GameObject:
   m_ObjectHideFlags: 0

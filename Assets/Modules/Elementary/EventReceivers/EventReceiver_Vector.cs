@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Elementary
 {
-    public class EventReciever_Vector : MonoBehaviour
+    public class EventReceiver_Vector : MonoBehaviour
     {
         public event Action<Vector3> OnEvent;
 

@@ -1,17 +1,18 @@
 using Elementary;
 using UnityEngine;
 
-public class ShotMechanics : MonoBehaviour
+public class ShootMechanics : MonoBehaviour
 {
     [SerializeField]
-    private EventReciever_Vector shotReceiver;
+    private EventReceiver shotReceiver;
 
     [SerializeField] 
     private BulletShooter bulletShooter;
     
     [SerializeField] 
     private Transform bulletSpawnPoint;
-    
+
+    [SerializeField] private Vector3 shotVector;
     private void OnEnable()
     {
         shotReceiver.OnEvent += OnShotEvent;
@@ -22,8 +23,8 @@ public class ShotMechanics : MonoBehaviour
         shotReceiver.OnEvent -= OnShotEvent;
     }
 
-    private void OnShotEvent(Vector3 v)
+    private void OnShotEvent()
     {
-        bulletShooter.Shoot(v, bulletSpawnPoint);
+        bulletShooter.Shoot(shotVector, bulletSpawnPoint);
     }
 }

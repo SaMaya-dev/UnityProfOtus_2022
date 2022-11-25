@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using Elementary;
 using UnityEngine;
 
 public class JumpMechanics : MonoBehaviour
 {
     [SerializeField]
-    private EventReciever_Vector jumpReceiver;
+    private EventReceiver jumpReceiver;
+    [SerializeField]
+    private Vector3 jumpVector;
+
 
     [SerializeField] 
     private Rigidbody rigidbody;
@@ -21,8 +22,8 @@ public class JumpMechanics : MonoBehaviour
         jumpReceiver.OnEvent -= OnJumpEvent;
     }
 
-    private void OnJumpEvent(Vector3 v)
+    private void OnJumpEvent()
     {
-        rigidbody.AddForce(v);
+        rigidbody.AddForce(jumpVector);
     }
 }
