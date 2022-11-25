@@ -1,8 +1,9 @@
 using Elementary;
 using UnityEngine;
- 
+using Zenject;
 
-    public sealed class DeathMechanics : MonoBehaviour
+
+public sealed class DeathMechanics : MonoBehaviour
     {
         [SerializeField]
         private IntBehaviour hitPoints;
@@ -10,6 +11,9 @@ using UnityEngine;
         [SerializeField]
         private EventReceiver deathReceiver;
 
+        [Inject] 
+        private IGameFinisher _gameFinisher;
+        
         private void OnEnable()
         {
             this.hitPoints.OnValueChanged += this.OnHitPointsChanged;
@@ -25,6 +29,7 @@ using UnityEngine;
             if (newHitPoints <= 0)
             {
                 this.deathReceiver.Call();
+                _gameFinisher.GameOver();
             }
         }
     }

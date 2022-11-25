@@ -1,10 +1,32 @@
+using System;
 using Entities;
+using Unity.VisualScripting;
 using UnityEngine;
+using Zenject;
 
 public sealed class InputController : MonoBehaviour
 {
     [SerializeField] private Entity unit;
+    [Inject] private IGameStarter gameStarter;
+    [Inject] private IGameFinisher gameFinisher;
     
+    private void Awake()
+    {
+        enabled = false;
+        gameStarter.GameStarted += OnGameStarted;
+        gameFinisher.GameFinished += OnGameFinished;
+    }
+
+    private void OnGameFinished()
+    {
+        enabled = false;
+    }
+
+    private void OnGameStarted()
+    {
+        enabled = true;
+    }
+
     private void Update()
     {
         this.HandleKeyboard();
@@ -54,5 +76,11 @@ public sealed class InputController : MonoBehaviour
     {
         const float speed = 5.0f;
         this.unit.Get<IShootComponent>().Shoot();
+    }
+
+    private void OnDestroy()
+    {
+        gameStarter.GameStarted -= OnGameStarted;
+        gameFinisher.GameFinished -= OnGameFinished;
     }
 }
