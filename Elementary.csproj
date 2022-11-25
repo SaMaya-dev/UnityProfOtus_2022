@@ -53,6 +53,7 @@
      <Compile Include="Assets\Modules\Elementary\Time\MonoBehaviours\StopwatchBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\Adapters\StringAdapter.cs" />
      <Compile Include="Assets\Modules\Elementary\Scripts\TargetFrameRateScript.cs" />
+     <Compile Include="Assets\Modules\Elementary\Pool\SimplePool.cs" />
      <Compile Include="Assets\Modules\Elementary\Bundle\Bundle.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableFloat.cs" />
      <Compile Include="Assets\Modules\Elementary\Conditions\ScriptableCondition.cs" />
@@ -87,6 +88,7 @@
      <Compile Include="Assets\Modules\Elementary\Conditions\ConditionBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Time\MonoBehaviours\PeriodBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\MonoBehaviours\BoolBehaviour.cs" />
+     <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver_Vector.cs" />
      <Compile Include="Assets\Modules\Elementary\Scripts\BecameVisibleScript.cs" />
      <Compile Include="Assets\Modules\Elementary\Scripts\DontDestroyOnLoadScript.cs" />
      <Compile Include="Assets\Modules\Elementary\States\StateMachine.cs" />
@@ -95,7 +97,6 @@
      <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableBool.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\Adapters\IntAdapter.cs" />
      <Compile Include="Assets\Modules\Elementary\Scripts\RunInBackgroundScript.cs" />
-     <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReciever_Vector.cs" />
      <None Include="Assets\Modules\Elementary\Elementary.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
