@@ -10,9 +10,6 @@ public sealed class DeathMechanics : MonoBehaviour
 
         [SerializeField]
         private EventReceiver deathReceiver;
-
-        [Inject] 
-        private IGameFinisher _gameFinisher;
         
         private void OnEnable()
         {
@@ -29,7 +26,6 @@ public sealed class DeathMechanics : MonoBehaviour
             if (newHitPoints <= 0)
             {
                 this.deathReceiver.Call();
-                _gameFinisher.GameOver();
             }
         }
     }

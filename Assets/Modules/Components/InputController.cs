@@ -7,16 +7,21 @@ using Zenject;
 public sealed class InputController : MonoBehaviour
 {
     [SerializeField] private Entity unit;
-    [Inject] private IGameStarter gameStarter;
-    [Inject] private IGameFinisher gameFinisher;
+    [Inject] private IGameGameEventReceiver gameGameEventReceiver;
     
-    private void Awake()
+    private void OnEnable()
     {
         enabled = false;
-        gameStarter.GameStarted += OnGameStarted;
-        gameFinisher.GameFinished += OnGameFinished;
+        gameGameEventReceiver.GameStarted += OnGameStarted;
+        gameGameEventReceiver.GameFinished += OnGameFinished;
     }
 
+    private void OnDisable()
+    {
+        gameGameEventReceiver.GameStarted -= OnGameStarted;
+        gameGameEventReceiver.GameFinished -= OnGameFinished;
+    }
+    
     private void OnGameFinished()
     {
         enabled = false;
@@ -77,10 +82,5 @@ public sealed class InputController : MonoBehaviour
         const float speed = 5.0f;
         this.unit.Get<IShootComponent>().Shoot();
     }
-
-    private void OnDestroy()
-    {
-        gameStarter.GameStarted -= OnGameStarted;
-        gameFinisher.GameFinished -= OnGameFinished;
-    }
+    
 }

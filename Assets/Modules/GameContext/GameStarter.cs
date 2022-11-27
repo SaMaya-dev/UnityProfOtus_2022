@@ -6,16 +6,14 @@ using Zenject;
 public class GameStarter : MonoBehaviour
 {
     [Inject] 
-    private IGameStarter gameStarter;
-    [Inject] 
-    private IGameFinisher gameFinisher;
+    private IGameGameEventReceiver gameGameEventReceiver;
     
     [SerializeField] 
     private TimerBehaviour timerBehaviour;
 
     private void Awake()
     {
-        gameFinisher.GameFinished += RestartGame;
+        gameGameEventReceiver.GameFinished += RestartGame;
     }
 
     private IEnumerator Start()
@@ -38,7 +36,7 @@ public class GameStarter : MonoBehaviour
     }
     private void OnTimerFinished()
     {
-        gameStarter.StartGame();
+        gameGameEventReceiver.StartGame();
     }
 
     private void OnDestroy()

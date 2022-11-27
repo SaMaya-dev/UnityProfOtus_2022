@@ -5,28 +5,28 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
 
-public class RestartPosition : MonoBehaviour
+public class RestartPositionController : MonoBehaviour
 {
     [SerializeField]
     private GameObject gameObject;
 
     [Inject] 
-    private IGameStarter GameFinisher;
+    private IGameGameEventReceiver GameFinisher;
     
     private Vector3 defaultPosition;
     private void Awake()
     {
         defaultPosition = gameObject.transform.position;
-        GameFinisher.GameStarted += Reposition;
+        GameFinisher.GameStarted += RestartPosition;
     }
 
-    private void Reposition()
+    private void RestartPosition()
     {
         gameObject.transform.position = defaultPosition;
     }
 
     private void OnDestroy()
     {
-        GameFinisher.GameStarted -= Reposition;
+        GameFinisher.GameStarted -= RestartPosition;
     }
 }

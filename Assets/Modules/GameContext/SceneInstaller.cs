@@ -11,9 +11,7 @@ public class SceneInstaller : MonoInstaller
             .FromInstance(bulletShooter)
             .AsSingle();
 
-        Container.BindInterfacesTo<GameFinisherStarterStateObservable>().AsSingle();
-        
-        //Container.Bind<IFinishGame>().To<GameContext>().AsSingle();
-        //Container.Bind<IStartGame>().To<GameContext>().AsSingle();
+        Container.Bind<CharacterService>().AsSingle();
+        Container.BindInterfacesTo<GameEventReceiver>().AsSingle();
     }
 }

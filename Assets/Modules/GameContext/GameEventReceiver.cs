@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class  GameFinisherStarterStateObservable : IGameStarter, IGameFinisher
+public class  GameEventReceiver : IGameGameEventReceiver
 {
     public event Action GameStarted;
     public event Action GameFinished;
@@ -11,11 +11,15 @@ public class  GameFinisherStarterStateObservable : IGameStarter, IGameFinisher
         GameStarted?.Invoke();
         Debug.Log("Game Started!");
     }
-    
+
     public void GameOver()
     {
         GameFinished?.Invoke();
         Debug.Log("Game Over!");
     }
 
+    public void Win()
+    {
+        throw new NotImplementedException();
+    }
 }
