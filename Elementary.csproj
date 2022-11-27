@@ -44,59 +44,59 @@
      <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableString.cs" />
      <Compile Include="Assets\Modules\Elementary\Scripts\ActivationBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver_Collision.cs" />
-     <Compile Include="Assets\Modules\Elementary\EventReceivers\MultiEventReceiver.cs" />
      <Compile Include="Assets\Modules\Elementary\States\State.cs" />
-     <Compile Include="Assets\Modules\Elementary\Actions\ActionObservable.cs" />
      <Compile Include="Assets\Modules\Elementary\EventReceivers\MultiEventReceiver_Base.cs" />
-     <Compile Include="Assets\Modules\Elementary\Scripts\SetParentOnAwakeScript.cs" />
      <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver_Bundle.cs" />
-     <Compile Include="Assets\Modules\Elementary\Time\MonoBehaviours\StopwatchBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\Adapters\StringAdapter.cs" />
-     <Compile Include="Assets\Modules\Elementary\Scripts\TargetFrameRateScript.cs" />
      <Compile Include="Assets\Modules\Elementary\Pool\SimplePool.cs" />
-     <Compile Include="Assets\Modules\Elementary\Bundle\Bundle.cs" />
-     <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableFloat.cs" />
      <Compile Include="Assets\Modules\Elementary\Conditions\ScriptableCondition.cs" />
      <Compile Include="Assets\Modules\Elementary\Conditions\ICondition.cs" />
      <Compile Include="Assets\Modules\Elementary\Conditions\ConditionComposite.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\MonoBehaviours\FloatBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver_Float.cs" />
      <Compile Include="Assets\Modules\Elementary\States\StateComposite.cs" />
-     <Compile Include="Assets\Modules\Elementary\Time\MonoBehaviours\TimerBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\States\StateCoroutine.cs" />
      <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver_Trigger.cs" />
      <Compile Include="Assets\Modules\Elementary\Actions\ActionBehaviour_PlayParticles.cs" />
      <Compile Include="Assets\Modules\Elementary\Time\Base\Countdown.cs" />
+     <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver.cs" />
+     <Compile Include="Assets\Modules\Elementary\Primitives\MonoBehaviours\LimitedIntBehavior.cs" />
+     <Compile Include="Assets\Modules\Elementary\Actions\ActionComposite.cs" />
+     <Compile Include="Assets\Modules\Elementary\Scripts\ColliderSensor.cs" />
+     <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableInt.cs" />
+     <Compile Include="Assets\Modules\Elementary\Operations\OperationBehaviour_Bundle.cs" />
+     <Compile Include="Assets\Modules\Elementary\Primitives\Adapters\FloatAdapter.cs" />
+     <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver_Vector.cs" />
+     <Compile Include="Assets\Modules\Elementary\Scripts\BecameVisibleScript.cs" />
+     <Compile Include="Assets\Modules\Elementary\States\StateMachine.cs" />
+     <Compile Include="Assets\Modules\Elementary\Time\MonoBehaviours\CountdownBehaviour.cs" />
+     <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableBool.cs" />
+     <Compile Include="Assets\Modules\Elementary\Primitives\Adapters\IntAdapter.cs" />
+     <Compile Include="Assets\Modules\Elementary\Scripts\RunInBackgroundScript.cs" />
+     <Compile Include="Assets\Modules\Elementary\EventReceivers\MultiEventReceiver.cs" />
+     <Compile Include="Assets\Modules\Elementary\Actions\ActionObservable.cs" />
+     <Compile Include="Assets\Modules\Elementary\Scripts\SetParentOnAwakeScript.cs" />
+     <Compile Include="Assets\Modules\Elementary\Time\MonoBehaviours\StopwatchBehaviour.cs" />
+     <Compile Include="Assets\Modules\Elementary\Scripts\TargetFrameRateScript.cs" />
+     <Compile Include="Assets\Modules\Elementary\Bundle\Bundle.cs" />
+     <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableFloat.cs" />
+     <Compile Include="Assets\Modules\Elementary\Time\MonoBehaviours\TimerBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Actions\ActionBehaviour_PlayAnimation.cs" />
      <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver_String.cs" />
-     <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver.cs" />
      <Compile Include="Assets\Modules\Elementary\Conditions\ConditionCountdown.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\MonoBehaviours\IntBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Actions\IAction.cs" />
-     <Compile Include="Assets\Modules\Elementary\Primitives\MonoBehaviours\LimitedIntBehavior.cs" />
-     <Compile Include="Assets\Modules\Elementary\Actions\ActionComposite.cs" />
      <Compile Include="Assets\Modules\Elementary\States\IState.cs" />
      <Compile Include="Assets\Modules\Elementary\EventReceivers\MultiEventReceiver_Proxy.cs" />
-     <Compile Include="Assets\Modules\Elementary\Scripts\ColliderSensor.cs" />
-     <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableInt.cs" />
      <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver_Int.cs" />
      <Compile Include="Assets\Modules\Elementary\Conditions\Condition.cs" />
-     <Compile Include="Assets\Modules\Elementary\Operations\OperationBehaviour_Bundle.cs" />
      <Compile Include="Assets\Modules\Elementary\Actions\ActionBehaviour.cs" />
-     <Compile Include="Assets\Modules\Elementary\Primitives\Adapters\FloatAdapter.cs" />
      <Compile Include="Assets\Modules\Elementary\Operations\OperationBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Conditions\ConditionBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Time\MonoBehaviours\PeriodBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\MonoBehaviours\BoolBehaviour.cs" />
-     <Compile Include="Assets\Modules\Elementary\EventReceivers\EventReceiver_Vector.cs" />
-     <Compile Include="Assets\Modules\Elementary\Scripts\BecameVisibleScript.cs" />
      <Compile Include="Assets\Modules\Elementary\Scripts\DontDestroyOnLoadScript.cs" />
-     <Compile Include="Assets\Modules\Elementary\States\StateMachine.cs" />
-     <Compile Include="Assets\Modules\Elementary\Time\MonoBehaviours\CountdownBehaviour.cs" />
      <Compile Include="Assets\Modules\Elementary\Primitives\Base\LimitedInt.cs" />
-     <Compile Include="Assets\Modules\Elementary\Primitives\ScriptableObjects\ScriptableBool.cs" />
-     <Compile Include="Assets\Modules\Elementary\Primitives\Adapters\IntAdapter.cs" />
-     <Compile Include="Assets\Modules\Elementary\Scripts\RunInBackgroundScript.cs" />
      <None Include="Assets\Modules\Elementary\Elementary.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -347,8 +347,17 @@
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="Zenject-usage">
+     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+     </Reference>
+     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
@@ -359,6 +368,12 @@
      <Reference Include="Sirenix.OdinInspector.Editor">
      <HintPath>C:\Repos\MayOtus\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Burst.Unsafe">
+     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Mdb">
+     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.OdinInspector.Attributes">
      <HintPath>C:\Repos\MayOtus\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
      </Reference>
@@ -368,6 +383,15 @@
      <Reference Include="Unity.VisualScripting.IonicZip">
      <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
+     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Pdb">
+     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil">
+     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     </Reference>
      <Reference Include="log4netPlastic">
      <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
@@ -376,6 +400,9 @@
      </Reference>
      <Reference Include="Sirenix.Utilities">
      <HintPath>C:\Repos\MayOtus\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
+     </Reference>
+     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -389,41 +416,14 @@
      <Reference Include="Sirenix.Serialization">
      <HintPath>C:\Repos\MayOtus\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Burst.Cecil.Rocks">
+     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     </Reference>
      <Reference Include="unityplastic">
      <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>C:\Repos\MayOtus\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil">
-     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>C:\Repos\MayOtus\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-     </Reference>
-     <Reference Include="Zenject-usage">
-     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
-     </Reference>
-     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
-     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-     </Reference>
-     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
-     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
-     </Reference>
-     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
-     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
-     </Reference>
-     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
-     <HintPath>C:\Repos\MayOtus\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

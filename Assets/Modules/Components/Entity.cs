@@ -1,25 +1,25 @@
+using System;
 using System.Collections.Generic;
-using Entities;
 using UnityEngine;
 
 public sealed class Entity : MonoBehaviour, IEntity
 {
     [SerializeField]
-    private List<object> components;
+    private List<Component> components;
 
     public Entity()
     {
-        this.components = new List<object>();
+        this.components = new List<Component>();
     }
 
-    public Entity(IEnumerable<object> elements)
+    public Entity(IEnumerable<Component> elements)
     {
-        this.components = new List<object>(elements);
+        this.components = new List<Component>(elements);
     }
 
-    public Entity(params object[] elements)
+    public Entity(params Component[] elements)
     {
-        this.components = new List<object>(elements);
+        this.components = new List<Component>(elements);
     }
 
     public T Get<T>()
@@ -32,7 +32,7 @@ public sealed class Entity : MonoBehaviour, IEntity
             }
         }
 
-        throw new EntityException($"Element of type {typeof(T).Name} is not found!");
+        throw new Exception($"Element of type {typeof(T).Name} is not found!");
     }
 
     public T[] GetAll<T>()
@@ -54,12 +54,12 @@ public sealed class Entity : MonoBehaviour, IEntity
         return this.components.ToArray();
     }
 
-    public void Add(object element)
+    public void Add(Component element)
     {
         this.components.Add(element);
     }
 
-    public void Remove(object element)
+    public void Remove(Component element)
     {
         this.components.Remove(element);
     }

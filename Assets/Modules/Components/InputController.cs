@@ -1,22 +1,19 @@
-using System;
-using Entities;
-using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
 
 public sealed class InputController : MonoBehaviour
 {
-    [SerializeField] private Entity unit;
+    [Inject] private CharacterService characterService;
     [Inject] private IGameGameEventReceiver gameGameEventReceiver;
     
-    private void OnEnable()
+    private void Awake()
     {
         enabled = false;
         gameGameEventReceiver.GameStarted += OnGameStarted;
         gameGameEventReceiver.GameFinished += OnGameFinished;
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         gameGameEventReceiver.GameStarted -= OnGameStarted;
         gameGameEventReceiver.GameFinished -= OnGameFinished;
@@ -68,19 +65,19 @@ public sealed class InputController : MonoBehaviour
     private void Move(Vector3 direction)
     {
         const float speed = 5.0f;
-        this.unit.Get<IMoveComponent>().Move(direction * (speed * Time.deltaTime));
+        characterService.GetCharacter().Get<IMoveComponent>().Move(direction * (speed * Time.deltaTime));
     }
     
     private void Jump()
     {
         const float speed = 5.0f;
-        this.unit.Get<IJumpComponent>().Jump();
+        characterService.GetCharacter().Get<IJumpComponent>().Jump();
     }
     
     private void Shoot()
     {
         const float speed = 5.0f;
-        this.unit.Get<IShootComponent>().Shoot();
+        characterService.GetCharacter().Get<IShootComponent>().Shoot();
     }
     
 }
