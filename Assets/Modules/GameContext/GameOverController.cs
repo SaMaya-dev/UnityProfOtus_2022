@@ -4,14 +4,14 @@ using Zenject;
 public class GameOverController : MonoBehaviour
 {
     [Inject] 
-    private IGameGameEventReceiver gameGameEventReceiver;
+    private IGameEventReceiver gameEventReceiver;
     
     [SerializeField]
     private string checkCollisions;
     private void OnEnable()
     {
-        gameGameEventReceiver.GameStarted += OnGameStarted;
-        gameGameEventReceiver.GameFinished += OnGameFinished;
+        gameEventReceiver.GameStarted += OnGameStarted;
+        gameEventReceiver.GameFinished += OnGameFinished;
         enabled = false;
     }
 
@@ -27,14 +27,14 @@ public class GameOverController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != checkCollisions)
+        if (other.CompareTag(checkCollisions))
             return;
-        gameGameEventReceiver.GameOver();
+        gameEventReceiver.GameOver();
     }
 
     private void OnDisable()
     {
-        gameGameEventReceiver.GameStarted -= OnGameStarted;
-        gameGameEventReceiver.GameFinished -= OnGameFinished;
+        gameEventReceiver.GameStarted -= OnGameStarted;
+        gameEventReceiver.GameFinished -= OnGameFinished;
     }
 }

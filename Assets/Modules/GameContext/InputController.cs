@@ -4,19 +4,19 @@ using Zenject;
 public sealed class InputController : MonoBehaviour
 {
     [Inject] private CharacterService characterService;
-    [Inject] private IGameGameEventReceiver gameGameEventReceiver;
+    [Inject] private IGameEventReceiver _gameEventReceiver;
     
-    private void Awake()
+    private void OnEnable()
     {
         enabled = false;
-        gameGameEventReceiver.GameStarted += OnGameStarted;
-        gameGameEventReceiver.GameFinished += OnGameFinished;
+        _gameEventReceiver.GameStarted += OnGameStarted;
+        _gameEventReceiver.GameFinished += OnGameFinished;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
-        gameGameEventReceiver.GameStarted -= OnGameStarted;
-        gameGameEventReceiver.GameFinished -= OnGameFinished;
+        _gameEventReceiver.GameStarted -= OnGameStarted;
+        _gameEventReceiver.GameFinished -= OnGameFinished;
     }
     
     private void OnGameFinished()
