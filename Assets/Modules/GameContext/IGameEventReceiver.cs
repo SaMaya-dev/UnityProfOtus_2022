@@ -1,5 +1,5 @@
 using System;
-public interface IGameGameEventReceiver
+public interface IGameEventReceiver
 {
     event Action  GameStarted;
     event Action GameFinished;

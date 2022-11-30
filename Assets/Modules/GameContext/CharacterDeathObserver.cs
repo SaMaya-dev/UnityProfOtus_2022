@@ -10,17 +10,22 @@ namespace Modules.GameContext
         private CharacterService characterService;
         
         [Inject]
-        private IGameGameEventReceiver gameGameEventReceiver;
+        private IGameEventReceiver _gameEventReceiver;
         
 
         private void OnEnable()
         {
             characterService.GetCharacter().Get<IDeathComponent>().OnDeath += OnCharacterDied;
         }
+        
+        private void OnDisable()
+        {
+            characterService.GetCharacter().Get<IDeathComponent>().OnDeath -= OnCharacterDied;
+        }
 
         private void OnCharacterDied()
         {
-            gameGameEventReceiver.GameOver();
+            _gameEventReceiver.GameOver();
         }
     }
 }

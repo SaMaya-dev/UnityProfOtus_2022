@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class  GameEventReceiver : IGameGameEventReceiver
+public class  GameEventReceiver : IGameEventReceiver
 {
     public event Action GameStarted;
     public event Action GameFinished;

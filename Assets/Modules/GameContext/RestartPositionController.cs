@@ -7,11 +7,11 @@ using Zenject;
 
 public class RestartPositionController : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject gameObject;
+    [Inject] 
+    private CharacterService characterService;
 
     [Inject] 
-    private IGameGameEventReceiver GameFinisher;
+    private IGameEventReceiver GameFinisher;
     
     private Vector3 defaultPosition;
     private void Awake()
@@ -22,7 +22,7 @@ public class RestartPositionController : MonoBehaviour
 
     private void RestartPosition()
     {
-        gameObject.transform.position = defaultPosition;
+        characterService.GetCharacter().Get<ISetPositionComponent>().Set(defaultPosition);
     }
 
     private void OnDestroy()
