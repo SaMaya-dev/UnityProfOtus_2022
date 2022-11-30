@@ -12,7 +12,8 @@ public class OpenUpgradePopupButton : MonoBehaviour
     [SerializeField] private Button button;
 
     [Inject] private IPopupManager<PopupName> popupManager;
-    [Inject] private PlayerUpgrader playerUpgrader;
+    [Inject] private UpgradeModelFactory upgradeModelFactory;
+    
     private void Awake()
     {
         button.onClick.AddListener(ShowPopup);
@@ -20,7 +21,7 @@ public class OpenUpgradePopupButton : MonoBehaviour
 
     private void ShowPopup()
     {
-        var model = playerUpgrader.GetModel();
+        var model = upgradeModelFactory.Create();
         popupManager.ShowPopup(key, model);
     }
 }

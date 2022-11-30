@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e033fc84c611b114bac8ca680b942134, type: 3}
   m_Name: Upgrade2
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeInfo
-  level: 2
+  level: 1
   maxLevel: 100
   hp: 150
   maxHp: 1000

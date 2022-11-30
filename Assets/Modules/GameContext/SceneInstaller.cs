@@ -1,5 +1,4 @@
 using Game.GameEngine;
-using GameElements;
 using UIFrames;
 using UnityEngine;
 using Upgrades;
@@ -11,6 +10,7 @@ public class SceneInstaller : MonoInstaller
     [SerializeField] private CharacterService characterService;
     [SerializeField] private PopupManager popupManager;
     [SerializeField] private PlayerUpgrader playerUpgrader;
+    [SerializeField] private UpgradeModelFactory upgradeModelFactory;
     
     public override void InstallBindings()
     {
@@ -20,6 +20,7 @@ public class SceneInstaller : MonoInstaller
 
         Container.Bind<CharacterService>().FromInstance(characterService).AsSingle();
         Container.Bind<PlayerUpgrader>().FromInstance(playerUpgrader).AsSingle();
+        Container.Bind<UpgradeModelFactory>().FromInstance(upgradeModelFactory).AsSingle();
         Container.Bind<IPopupManager<PopupName>>().FromInstance(popupManager).AsSingle();
         Container.BindInterfacesTo<GameEventReceiver>().AsSingle();
     }

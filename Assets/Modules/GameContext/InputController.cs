@@ -6,14 +6,14 @@ public sealed class InputController : MonoBehaviour
     [Inject] private CharacterService characterService;
     [Inject] private IGameEventReceiver _gameEventReceiver;
     
-    private void OnEnable()
+    private void Awake()
     {
         enabled = false;
         _gameEventReceiver.GameStarted += OnGameStarted;
         _gameEventReceiver.GameFinished += OnGameFinished;
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         _gameEventReceiver.GameStarted -= OnGameStarted;
         _gameEventReceiver.GameFinished -= OnGameFinished;

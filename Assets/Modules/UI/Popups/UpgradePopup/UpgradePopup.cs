@@ -3,6 +3,7 @@ using TMPro;
 using UIFrames.Unity;
 using UnityEngine;
 using UnityEngine.UI;
+using Upgrades;
 
 public class UpgradePopup : UnityFrame
 {
@@ -19,26 +20,49 @@ public class UpgradePopup : UnityFrame
         {
             throw new Exception("Expected Presentation model!");
         }
+        
+        btn.onClick.AddListener(OnBuyButtonClicked);
 
         this.presenter = presenter;
-
-        this.levelTxt.text = $"Level {presenter.GetLevel()} / {presenter.GetMaxLevel()}";
-        this.hpTxt.text = $"Hit points {presenter.GetHP()} / {presenter.GetMaxHP()}";
-        this.damageTxt.text = presenter.GetDamage();
-        this.icon.sprite = presenter.GetIcon();
-
-        this.btn.interactable = presenter.CanBeUpgraded(presenter.GetLevel());
-        this.btn.onClick.AddListener(this.OnBuyButtonClicked);
+        presenter.OnStateChanged += UpdateState;
+        
+        UpdateView();
     }
     
     protected override void OnHide()
     {
-        this.btn.onClick.RemoveListener(this.OnBuyButtonClicked);
+        btn.onClick.RemoveListener(this.OnBuyButtonClicked);
+        
+        if (presenter != null)
+            presenter.OnStateChanged -= UpdateState;
+    }
+    
+    private void UpdateView()
+    {
+        levelTxt.text = presenter.GetLevelText();
+        hpTxt.text = $"Hit points {presenter.GetHPText()}";
+        damageTxt.text = presenter.GetDamageText();
+        icon.sprite = presenter.GetIcon();
+
+        btn.interactable = presenter.CanBeUpgraded();
+    }
+    
+    private void UpdateState(IUpgradePopupPresentationModel model)
+    {
+        if (presenter != model)
+        {
+            presenter.OnStateChanged -= UpdateState;
+            
+            presenter = model;
+            presenter.OnStateChanged += UpdateState;
+        }
+
+        UpdateView();
     }
 
     private void OnBuyButtonClicked()
     {
-        this.presenter.BtnClicked();
-        this.btn.interactable = presenter.CanBeUpgraded(presenter.GetLevel());
+        presenter.OnButtonClicked();
+        btn.interactable = presenter.CanBeUpgraded();
     }
 }

@@ -1,27 +1,34 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Upgrades
 {
     public class PlayerUpgrader : MonoBehaviour
     {
-        [SerializeField] private Upgrades upgrades;
-        
-        public IUpgradePopupPresentationModel GetModel()
-        {
-            return new UpgradePopupPresentationModel(upgrades.upgradeList[0], this);
-        }
-        
-        public bool CanBeUpgraded(string level)
+
+        public int CurrentLevel => PlayerPrefs.GetInt("lvl", 0);
+        public bool CanBeUpgraded(int level)
         {
             //ToDo
             return true;
         }
 
-        public void Upgrade(string upgradeInfoLevel)
+        public bool Upgrade(int level)
         {
             //ToDO
-            Debug.Log($"Upgraded to level {upgradeInfoLevel}!");
+            if (CurrentLevel == level)
+            {
+                Debug.Log($"Max level {level}!");
+                return false;
+            }
+                
+            Debug.Log($"Upgraded to level {level}!");
+            PlayerPrefs.SetInt("lvl", level);
+            return true;
+        }
+
+        public int GetNewLevel()
+        {
+            return (CurrentLevel + 1);
         }
     }
 }

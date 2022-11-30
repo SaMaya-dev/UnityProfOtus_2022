@@ -1,15 +1,16 @@
-
+using System;
 using UnityEngine;
 
-public interface IUpgradePopupPresentationModel
+namespace Upgrades
 {
-    string GetLevel();
-    string GetMaxLevel();
-    string GetHP();
-    
-    string GetMaxHP();
-    string GetDamage();
-    bool CanBeUpgraded(string level);
-    Sprite GetIcon();
-    void BtnClicked();
+    public interface IUpgradePopupPresentationModel
+    {
+        event Action<IUpgradePopupPresentationModel> OnStateChanged;
+        string GetLevelText();
+        string GetHPText();
+        string GetDamageText();
+        bool CanBeUpgraded();
+        Sprite GetIcon();
+        void OnButtonClicked();
+    }
 }
