@@ -16,12 +16,12 @@ public class SceneOpen : MonoBehaviour
         OpenScene("preloader", BASE_SCENE_PATH);
     }
 
-    [MenuItem("OpenScene/3. Lobby #2")]
+    [MenuItem("OpenScene/3. GameScene #2")]
     public static void OpenLobby()
     {
         if (Application.isPlaying)
             return;
-        OpenScene("Lobby", BASE_SCENE_PATH);
+        OpenScene("GameScene", BASE_SCENE_PATH);
     }
     
     private static void OpenScene(string sceneName, string path)
