@@ -804,7 +804,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoRun: 0
-  gameServices: []
+  gameServices:
+  - {fileID: 597136072}
   gameElements: []
 --- !u!1 &809473500
 GameObject:

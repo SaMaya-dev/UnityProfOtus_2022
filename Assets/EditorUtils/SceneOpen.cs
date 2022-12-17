@@ -16,7 +16,7 @@ public class SceneOpen : MonoBehaviour
         OpenScene("preloader", BASE_SCENE_PATH);
     }
 
-    [MenuItem("OpenScene/3. GameScene #2")]
+    [MenuItem("OpenScene/2. GameScene #2")]
     public static void OpenLobby()
     {
         if (Application.isPlaying)
